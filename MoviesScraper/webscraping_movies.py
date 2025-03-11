@@ -32,6 +32,7 @@ for row in rows:
 print(df)
 
 df.to_csv(csv_path)
+table_name = 'top_50_movies'
 
 conn = sqlite3.connect(db_name)
 df.to_sql(table_name, conn, if_exists='replace', index=False)
